@@ -25,9 +25,7 @@ The assumption is that the chessboard is fixed on the (x, y) plane at z=0, such 
 
 The output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. The distortion correction function is applied to the test image using `cv2.undistort()`. An example result of the sample image is
  
-![](camera_cal/calibration3.jpg?raw=true "Original_Image")
-
-![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image") 
+![](camera_cal/calibration3.jpg?raw=true "Original_Image") ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image") 
 
 ## Pipeline (single images)
 
@@ -35,9 +33,7 @@ The output `objpoints` and `imgpoints` are used to compute the camera calibratio
 
 The distortion correction applied using cv2.undistort to one of the test images resulted in :
 
-![](test_images/test2.jpg?raw=true "Original_Image")
-
-![](output_images/undistorted.jpg?raw=true "Undistorted_Image") 
+![](test_images/test2.jpg?raw=true "Original_Image") ![](output_images/undistorted.jpg?raw=true "Undistorted_Image") 
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
@@ -83,9 +79,7 @@ Using the x and y pixel positions of the located lane line pixels, a second orde
 
 f(y)=Ay^​2 + By + C 
 
-![](output_images/template.jpg?raw=true "Template") 
-
-![](output_images/result.jpg?raw=true "Result")
+![](output_images/template.jpg?raw=true "Template") ![](output_images/result.jpg?raw=true "Result")
 
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
