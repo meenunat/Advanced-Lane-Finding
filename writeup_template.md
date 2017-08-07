@@ -99,17 +99,11 @@ Here is an example of the result on a test image:
 
 ### Pipeline (video)
 
-#### 1. Provide a link to your final video output.  Your pipeline should perform reasonably well on the entire project video (wobbly lines are ok but no catastrophic failures that would cause the car to drive off the road!).
-
 Here's a video output [](./project_video.mp4)
-
-
 
 ### Discussion
 
-#### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
-
-The mountain roads are more challenging to detect because the curvature changes more frequently. Boundary region needs to be constrained to a much smaller area. Also need a way to distinguish carpool sign, since they were getting recognized as edge of the lane in challenge video.
+The mountain roads are more challenging to detect because the curvature changes more frequently. Boundary region needs to be constrained to a much smaller area. Also need a way to distinguish carpool sign, since the signs were getting misinterpreted as edge of the right lane in challenge video.
 
 Here's a challenge video output [](./challenge_output.mp4)
 Here's a harder challenge video output [](./harder_challenge_output.mp4)
