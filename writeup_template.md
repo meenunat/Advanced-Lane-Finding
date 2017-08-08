@@ -25,9 +25,9 @@ The assumption is that the chessboard is fixed on the (x, y) plane at z=0, such 
 
 The output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. The distortion correction function is applied to the test image using `cv2.undistort()`. An example result of the sample image is
  
-![[Original_Image]](camera_cal/calibration3.jpg?raw=true "Original_Image")
+|![[Original_Image]](camera_cal/calibration3.jpg?raw=true "Original_Image") | ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image")| 
+|:---:|:---:|
 
-![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image") 
 
 ## Pipeline (single images)
 
