@@ -23,7 +23,7 @@ The chessboard sample images were used for calibrating the camera. Objectpoints 
 
 The assumption is that the chessboard is fixed on the (x, y) plane at z=0, such that the object points are the same for each calibration image.  Thus, `objp` is just a replicated array of coordinates, and `objpoints` will be appended with a copy of it every time when the chessboard corners in a test image are successfully identified. `imgpoints` will be appended with the (x, y) pixel position of each of the corners in the image plane with each successful chessboard detection.  
 
-The output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. The distortion correction function is applied to the test image using `cv2.undistort()`. An example result of the sample image is
+The output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. The distortion correction function is applied to the test image using `cv2.undistort()`. An example result of the original image and undistorted image is shown:
  
 |![](camera_cal/calibration3.jpg?raw=true "Original_Image") | ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image")| 
 |:---:|:---:|
@@ -33,14 +33,14 @@ The output `objpoints` and `imgpoints` are used to compute the camera calibratio
 
 #### 1. Provide an example of a distortion-corrected image.
 
-The distortion correction applied using cv2.undistort to one of the test images resulted in :
+The distortion correction applied using cv2.undistort to one of the test images. The  original image and undisorted image is shown for comparison:
 
 |![](test_images/test2.jpg?raw=true "Original_Image")|![](output_images/undistorted.jpg?raw=true "Undistorted_Image")| 
 |:---:|:---:|
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
-A combination of color and gradient thresholds was used to generate a binary image (thresholding functions at lines 20 through 98). The thresholding preprocessing is applied at lines 158 through 161
+A combination of color and gradient thresholds was used to generate a binary image (thresholding functions at lines 20 through 98). The thresholding preprocessing is applied at lines 158 through 161. Binary output image after combined thresholding:
 
 ![](output_images/threshold.jpg?raw=true "Binary_Image_after_thresholding")
 
@@ -72,11 +72,13 @@ This resulted in the following source and destination points:
 
 The perspective transform was verified by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-
-
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
-A convolution was applied to the sliding window method which will maximize the number of "hot" pixels in each window using `np.convolve`. A convolution is the summation of the product of two separate signals, in our case the window template and the vertical slice of the pixel image. The window template used to slide across the image from left to right and any overlapping values are summed together, creating the convolved signal. The peak of the convolved signal is where there was the highest overlap of pixels and the most likely position for the lane marker. A smoothing factor was applied to the average to avoid lane detections jumping from frame to frame. 
+A convolution was applied to the sliding window method which will maximize the number of "hot" pixels in each window using `np.convolve`. A convolution is the summation of the product of two separate signals, in our case the window template and the vertical slice of the pixel image. 
+
+The window template used to slide across the image from left to right and any overlapping values are summed together, creating the convolved signal. The peak of the convolved signal is where there was the highest overlap of pixels and the most likely position for the lane marker. 
+
+A smoothing factor was applied to the average to avoid lane detections jumping from frame to frame. 
 
 Using the x and y pixel positions of the located lane line pixels, a second order polynomial curve was fitted:
 
