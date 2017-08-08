@@ -25,7 +25,7 @@ The assumption is that the chessboard is fixed on the (x, y) plane at z=0, such 
 
 The output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. The distortion correction function is applied to the test image using `cv2.undistort()`. An example result of the sample image is
  
-|![](camera_cal/calibration3.jpg "Original_Image") | ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image")| 
+|![](camera_cal/calibration3.jpg?raw=true "Original_Image") | ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image")| 
 |:---:|:---:|
 
 
@@ -37,6 +37,7 @@ The distortion correction applied using cv2.undistort to one of the test images 
 
 |![](test_images/test2.jpg?raw=true "Original_Image")|![](output_images/undistorted.jpg?raw=true "Undistorted_Image")| 
 |:---:|:---:|
+
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 A combination of color and gradient thresholds was used to generate a binary image (thresholding functions at lines 20 through 98). The thresholding preprocessing is applied at lines 158 through 161
