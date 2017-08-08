@@ -25,7 +25,7 @@ The assumption is that the chessboard is fixed on the (x, y) plane at z=0, such 
 
 The output `objpoints` and `imgpoints` are used to compute the camera calibration and distortion coefficients using the `cv2.calibrateCamera()` function. The distortion correction function is applied to the test image using `cv2.undistort()`. An example result of the sample image is
  
-|![[Original_Image]](camera_cal/calibration3.jpg?raw=true "Original_Image") | ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image")| 
+|![Alt Original_Image](camera_cal/calibration3.jpg?raw=true "Original_Image") | ![](camera_cal/test_undist.jpg?raw=true "Undistorted_Image")| 
 |:---:|:---:|
 
 
@@ -99,8 +99,10 @@ Video output of the pipeline: `./project_video.mp4`
 
 ### Discussion
 
-The mountain roads are more challenging to detect because the curvature changes more frequently. Boundary region needs to be constrained to a much smaller area. Also need a way to distinguish carpool sign, since the signs were getting misinterpreted as edge of the right lane in challenge video.
+The carpool signs on the surface of the road were getting misinterpreted as edge of the right lane in challenge video.
 
 Challenge video output where carpool sign on the surface of the road getting misinterpreted as lane edge: `./challenge_output.mp4`
+
+The mountain roads are more challenging to detect because the curvature changes more frequently. Boundary region needs to be constrained to a much smaller area. 
 
 Harder challenge video output with frequent curvature changes:`./harder_challenge_output.mp4`
