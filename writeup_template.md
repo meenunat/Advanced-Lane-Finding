@@ -35,10 +35,9 @@ The output `objpoints` and `imgpoints` are used to compute the camera calibratio
 
 The distortion correction applied using cv2.undistort to one of the test images resulted in :
 
-![](test_images/test2.jpg?raw=true "Original_Image")
-
-![](output_images/undistorted.jpg?raw=true "Undistorted_Image") 
-
+|![](test_images/test2.jpg?raw=true "Original_Image")
+|![](output_images/undistorted.jpg?raw=true "Undistorted_Image")| 
+|:---:|:---:|
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
 
 A combination of color and gradient thresholds was used to generate a binary image (thresholding functions at lines 20 through 98). The thresholding preprocessing is applied at lines 158 through 161
@@ -73,7 +72,7 @@ This resulted in the following source and destination points:
 
 The perspective transform was verified by drawing the `src` and `dst` points onto a test image and its warped counterpart to verify that the lines appear parallel in the warped image.
 
-![](output_images/warped.jpg?raw=true "Warped_Image") 
+
 
 #### 4. Describe how (and identify where in your code) you identified lane-line pixels and fit their positions with a polynomial?
 
@@ -83,10 +82,10 @@ Using the x and y pixel positions of the located lane line pixels, a second orde
 
 f(y)=Ay^​2 + By + C 
 
-![](output_images/template.jpg?raw=true "Template") 
-
-![](output_images/result.jpg?raw=true "Result")
-
+|![](output_images/warped.jpg?raw=true "Warped_Image")
+|![](output_images/template.jpg?raw=true "Template") 
+|![](output_images/result.jpg?raw=true "Result")
+|:---:|:---:|:---:|
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 Radius of curvature and position of the car on the road is calculated in lines 251 through 260 in the code
@@ -99,11 +98,12 @@ Here is an example of the result on a test image:
 
 ### Pipeline (video)
 
-Here's a video output [](./project_video.mp4)
+Video output of the pipeline: `./project_video.mp4`
 
 ### Discussion
 
 The mountain roads are more challenging to detect because the curvature changes more frequently. Boundary region needs to be constrained to a much smaller area. Also need a way to distinguish carpool sign, since the signs were getting misinterpreted as edge of the right lane in challenge video.
 
-Here's a challenge video output [](./challenge_output.mp4)
-Here's a harder challenge video output [](./harder_challenge_output.mp4)
+Challenge video output where carpool sign on the surface of the road getting misinterpreted as lane edge: `./challenge_output.mp4`
+
+Harder challenge video output with frequent curvature changes:`./harder_challenge_output.mp4`
