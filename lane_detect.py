@@ -11,7 +11,7 @@ import pickle
 import matplotlib.image as mpimg
 from moviepy.editor import VideoFileClip
 
-
+#Camera Calibration
 dist_pickle = pickle.load(open( "./camera_cal/calibration_pickle.p", "rb" ) )
 mtx = dist_pickle["mtx"] 
 dist = dist_pickle["dist"] 
