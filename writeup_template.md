@@ -35,7 +35,7 @@ The output `objpoints` and `imgpoints` are used to compute the camera calibratio
 
 The distortion correction applied using cv2.undistort to one of the test images resulted in :
 
-|![](test_images/test2.jpg?raw=true title="Original_Image")|![](output_images/undistorted.jpg?raw=true "Undistorted_Image")| 
+|![](test_images/test2.jpg?raw=true "Original_Image")|![](output_images/undistorted.jpg?raw=true "Undistorted_Image")| 
 |:---:|:---:|
 
 #### 2. Describe how (and identify where in your code) you used color transforms, gradients or other methods to create a thresholded binary image.  Provide an example of a binary image result.
